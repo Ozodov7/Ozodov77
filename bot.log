@@ -1,0 +1,94 @@
+2025-04-14 16:11:02,155 - aiogram.dispatcher - INFO - Start polling
+2025-04-14 16:11:02,283 - aiogram.dispatcher - INFO - Run polling for bot @ozodov_d_bot id=7794731820 - 'ќзодов'
+2025-04-14 16:11:03,090 - aiogram.event - INFO - Update id=786048445 is handled. Duration 671 ms by bot id=7794731820
+2025-04-14 16:11:03,120 - aiogram.event - INFO - Update id=786048446 is handled. Duration 686 ms by bot id=7794731820
+2025-04-14 16:11:03,136 - aiogram.event - INFO - Update id=786048448 is handled. Duration 672 ms by bot id=7794731820
+2025-04-14 16:11:03,165 - aiogram.event - INFO - Update id=786048450 is handled. Duration 703 ms by bot id=7794731820
+2025-04-14 16:11:03,186 - aiogram.event - INFO - Update id=786048452 is handled. Duration 719 ms by bot id=7794731820
+2025-04-14 16:11:03,206 - aiogram.event - INFO - Update id=786048453 is handled. Duration 734 ms by bot id=7794731820
+2025-04-14 16:11:03,239 - aiogram.event - INFO - Update id=786048449 is handled. Duration 765 ms by bot id=7794731820
+2025-04-14 16:11:03,261 - aiogram.event - INFO - Update id=786048451 is handled. Duration 797 ms by bot id=7794731820
+2025-04-14 16:11:03,287 - aiogram.event - INFO - Update id=786048447 is handled. Duration 827 ms by bot id=7794731820
+2025-04-14 16:11:13,199 - aiogram.event - INFO - Update id=786048454 is handled. Duration 297 ms by bot id=7794731820
+2025-04-14 16:11:16,185 - aiogram.event - INFO - Update id=786048455 is not handled. Duration 625 ms by bot id=7794731820
+2025-04-14 16:11:16,186 - aiogram.event - ERROR - Cause exception while process update id=786048455 by bot id=7794731820
+ValidationError: 2 validation errors for SendMessage
+chat_id.int
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/int_type
+chat_id.str
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+Traceback (most recent call last):
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\IT PARK\Desktop\ddd\main.py", line 85, in ha_tanlanganda
+    await  call.bot.send_message(chat_id=getenv("ADMINS1"),\
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 2807, in send_message
+    call = SendMessage(
+           ^^^^^^^^^^^^
+  File "C:\Users\IT PARK\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for SendMessage
+chat_id.int
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/int_type
+chat_id.str
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-14 16:16:44,182 - aiogram.event - INFO - Update id=786048456 is handled. Duration 344 ms by bot id=7794731820
+2025-04-14 16:24:03,110 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-14 16:24:03,574 - aiogram.dispatcher - INFO - Polling stopped for bot @ozodov_d_bot id=7794731820 - 'ќзодов'
+2025-04-16 14:41:54,747 - aiogram.dispatcher - INFO - Start polling
+2025-04-16 14:41:54,872 - aiogram.dispatcher - INFO - Run polling for bot @ozodov_d_bot id=7794731820 - 'ќзодов'
+2025-04-16 14:42:59,477 - aiogram.event - INFO - Update id=786048457 is handled. Duration 545 ms by bot id=7794731820
+2025-04-16 15:39:38,876 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-04-16 15:39:38,892 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7794731820)
+2025-04-16 15:39:50,280 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7794731820)
