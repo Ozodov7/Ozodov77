@@ -92,3 +92,5 @@ chat_id.str
 2025-04-16 15:39:38,876 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
 2025-04-16 15:39:38,892 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7794731820)
 2025-04-16 15:39:50,280 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7794731820)
+2025-04-16 16:29:45,713 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-16 16:29:46,488 - aiogram.dispatcher - INFO - Polling stopped for bot @ozodov_d_bot id=7794731820 - 'ќзодов'
